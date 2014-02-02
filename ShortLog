@@ -1,4 +1,11 @@
-Julio Antúnez Tarín (2):
+Julio Antúnez Tarín (9):
       First sending.
       Update README and LICENSE files.
+      Bumped to version 1.0.0.
+      Merge branch 'release-1.0.0' into develop
+      Optimize code.
+      Fix yard tags in documentation.
+      Update README files.
+      Add a gems directory.
+      Merge branch 'feature-last-improvements' into develop
 
