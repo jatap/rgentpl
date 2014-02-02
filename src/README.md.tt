@@ -56,3 +56,4 @@ Or
     gem '<%= app_name %>'
 
     $ bundle install
+    $ rgentpl

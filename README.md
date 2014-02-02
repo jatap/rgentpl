@@ -56,3 +56,4 @@ As a library/gem:
     gem 'rgentpl'
 
     $ bundle install
+    $ rgentpl

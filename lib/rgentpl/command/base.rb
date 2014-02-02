@@ -8,20 +8,12 @@ module Rgentpl
     #
     # General command
     class Base < Thor
-      class_option :verbose, type: :boolean, aliases: '-v', default: false
+      map '-v' => :version
 
-      desc 'todo', 'TODO - Delete this command'
-      long_desc %q{
-      TODO
-      - Delete this command when clone this repository.
-      }
+      desc 'version, -v', 'Show Ruby Generator Template version.'
       # @return [String] the test message
-      def todo
-        if options[:verbose]
-          puts '*** Delete this command ***'
-        else
-          puts 'Delete this command'
-        end
+      def version
+        say "Rgentpl version #{Rgentpl::VERSION}", :yellow
       end
 
       # Add generate group command
