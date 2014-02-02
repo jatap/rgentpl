@@ -151,3 +151,5 @@ spec/dummy/.sass-cache
 # Secret Token
 config/initializers/secret_token.rb
 
+# Gem files
+bin/gems/*

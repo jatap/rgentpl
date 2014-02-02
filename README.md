@@ -37,22 +37,31 @@ Directories
 
     tmp/
 
+
+Installation
+============
+
+As a command line application:
+
+    $ git clone https://github.com/jatap/rgentpl.git
+
+As a library/gem:
+
+    // Install on current gemset
+    $ gem install 'rgentpl'
+
+    // Or inside a Gemfile
+    gem 'rgentpl'
+    $ bundle install
+
+
 Usage
 =====
 
 As a command line application:
 
-    $ git clone https://github.com/jatap/rgentpl.git
-    $ cd rgentpl
-    $ bin/rgentpl
+    $ rgentpl
 
-As a library/gem:
+As a library:
 
-    $ gem install 'rgentpl'
-
-    Or
-
-    // Gemfile
-    gem 'rgentpl'
-
-    $ bundle install
+    require 'rgentpl'

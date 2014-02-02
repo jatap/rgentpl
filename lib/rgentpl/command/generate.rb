@@ -35,11 +35,10 @@ module Rgentpl
       def create_app
         @app_path = options['app_path']
         @ctags    = options['ctags']
-
         directory('src', "#{@app_path.chomp('/')}/#{app_name}")
       end
 
-      # @retrun [void]
+      # @return [void]
       def add_perms
         chmod("#{@app_path.chomp('/')}/#{app_name}/bin/#{app_name}", 0755)
       end

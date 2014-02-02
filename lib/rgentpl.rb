@@ -16,6 +16,7 @@ module Rgentpl
     require f
   end
 
+  require_relative 'rgentpl/version'
   require_relative 'rgentpl/command/generate'
   require_relative 'rgentpl/command/base'
   require_relative 'rgentpl/boot/initializer'

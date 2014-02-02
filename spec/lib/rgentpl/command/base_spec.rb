@@ -1,35 +1,37 @@
 require 'spec_helper'
 
 describe Rgentpl::Command::Base do
-  let(:command) { Rgentpl::Command::Base.new }
+  context 'given a list of options' do
+    let(:command) { Rgentpl::Command::Base.new }
+
+    it 'responds successfully to help, version and generate' do
+      [:help, :version, :generate].each do |element|
+        expect(command).to respond_to element
+      end
+    end
+  end
 
   describe 'given a help option' do
-    it 'responds successfully' do
-      expect(command).to respond_to :help
+    before do
+      @help = capture_stdout do
+        Rgentpl::Command::Base.help(Thor::Base.shell.new)
+      end
+    end
+
+    it 'shows help info' do
+      expect(@help).to match(/help/)
     end
   end
 
-  describe 'given a todo option' do
-    it 'responds successfully' do
-      expect(command).to respond_to :todo
+  describe 'given a version option' do
+    before do
+      @version = capture_stdout do
+        Rgentpl::Command::Base.start %W[ version ]
+      end
     end
 
-    it 'shows todo message' do
-      expect { command.todo }.to change { STDOUT }
-    end
-  end
-
-  context 'admits a verbose option' do
-    it 'successfully' do
-      expect { Rgentpl::Command::Base.start %w[todo -v] }.to change { STDOUT }
-    end
-  end
-
-  describe 'responds to class options' do
-    let(:commands) { %w[ verbose ] }
-
-    it 'like verbose' do
-      commands.each { |c| expect(command.options).to include c }
+    it 'shows version info' do
+      expect(@version).to match(/version/)
     end
   end
 end
