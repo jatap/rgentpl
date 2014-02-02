@@ -1,8 +1,8 @@
 
-1.0.0 / 2014-02-01
+1.0.0 / 2014-02-02
 ==================
 
- * Merge conflicts.
+ * Update README and LICENSE files.
  * Refactor load library (not binary file use) use case.
  * Renaming from base repo.
  * First sending from ruby-template proyect.
