@@ -1,0 +1,59 @@
+# <%= app_name.camelize %>
+module <%= app_name.camelize %>
+  class << self
+    # Configure
+    #
+    # @param block [Proc] the configuration options
+    # @raise [NoMethodError] when new options are inside configuration block
+    # @return [<%= app_name.camelize %>::Configuration] the configuration
+    def configure(&block)
+      yield @config ||= <%= app_name.camelize %>::Configuration.new
+    rescue NoMethodError => e
+      add_new_attribute_from_exception e
+    end
+
+    # Configuration object
+    #
+    # @return [<%= app_name.camelize %>::Configuration] the configuration object
+    def config
+      @config ||= <%= app_name.camelize %>::Configuration.new
+    end
+
+    # Add new attribute in configuration block
+    #
+    # @param e [NoMethodError] the exception
+    # @return [void]
+    def add_new_attribute_from_exception(e)
+      method = e.name.to_s.gsub(/=$/, '')
+      @config.extend Virtus.model
+      @config.attribute method.to_sym, String, default: e.args.first
+      @config.send(e.name, e.args.first)
+    end
+  end
+
+  # Configuration
+  class Configuration
+    include Virtus.model
+
+    attribute :active,   Boolean,                default: true
+    attribute :log_file, String
+    attribute :options,  Hash[Symbol => String], default: {}
+
+    # Set custom default values
+    #
+    # @param args [Array] the attributes
+    # @return [void]
+    def initialize(*args)
+      super
+      # Bug - Update some default values
+      @log_file = <%= app_name.camelize %>.env + '.log'
+    end
+
+    # Configuration
+    #
+    # @return [<%= app_name.camelize %>::Configuration] the configuration
+    def config
+      <%= app_name.camelize %>.config
+    end
+  end
+end

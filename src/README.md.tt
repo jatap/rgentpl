@@ -1,0 +1,49 @@
+Introduction
+============
+
+**<%= app_name %>** is a Ruby library to generate a custom skeleton app.
+
+Directories
+===========
+
+    bin/
+      <%= app_name %>
+
+    config/
+      environments/
+      initializers/
+
+    coverage/
+
+    doc/
+      api/
+
+    lib/
+      <%= app_name %>/
+        boot/
+        command/
+        core/
+        core_ext/
+        exceptions/
+
+    log/
+      development.log
+      test.log
+      production.log
+
+    spec/
+
+    tasks/
+
+    tmp/
+
+Usage
+=====
+
+As a command line application:
+
+    $ <path_to_<%= app_name %>>/bin/<%= app_name %>
+
+As a library/gem:
+
+    // TODO

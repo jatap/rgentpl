@@ -1,0 +1,49 @@
+require 'spec_helper'
+
+describe <%= app_name.camelize %>::Configuration do
+  before :each do
+    @configuration = <%= app_name.camelize %>::Configuration.new
+  end
+
+  describe 'given expected attributes' do
+    [:active,
+     :log_file,
+     :options].each do |expected_attribute|
+      it 'responds to each of them' do
+        expect(@configuration).to respond_to expected_attribute
+      end
+    end
+  end
+
+  describe '#config' do
+    it 'is an <%= app_name.camelize %>::Configuration object' do
+      expect(<%= app_name.camelize %>.config).to be_kind_of <%= app_name.camelize %>::Configuration
+    end
+  end
+
+  context '#configure' do
+    before :each do
+      <%= app_name.camelize %>.configure do |config|
+        config.new_amazing_key = 'some value'
+        config.active          = false
+      end
+    end
+
+    describe 'can be configured with a block' do
+      it 'adding a new attribute' do
+        expect(<%= app_name.camelize %>.config.new_amazing_key).to eq 'some value'
+      end
+
+      it 'updating and existing one' do
+        expect(<%= app_name.camelize %>.config.active).to be_false
+      end
+    end
+  end
+
+  describe '.config' do
+    it 'an alias of <%= app_name.camelize %>.config' do
+      <%= app_name.camelize %>.config.active = false
+      expect(<%= app_name.camelize %>.config.to_hash).to eq @configuration.config.to_hash
+    end
+  end
+end

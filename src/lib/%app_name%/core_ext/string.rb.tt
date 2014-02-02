@@ -1,0 +1,8 @@
+# <%= app_name.camelize %>
+module <%= app_name.camelize %>
+  # Core Extensions
+  module CoreExt
+   # String.class_eval do
+   # end
+  end
+end

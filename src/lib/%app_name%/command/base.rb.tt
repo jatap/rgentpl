@@ -1,0 +1,28 @@
+# <%= app_name.camelize %>
+module <%= app_name.camelize %>
+  # Command
+  #
+  # Application command
+  module Command
+    # Base command
+    #
+    # General command
+    class Base < Thor
+      class_option :verbose, type: :boolean, aliases: '-v', default: false
+
+      desc 'todo', 'TODO - Delete this command'
+      long_desc %q{
+      TODO
+      - Delete this command when clone this repository.
+      }
+      # @return [String] the test message
+      def todo
+        if options[:verbose]
+          puts '*** Delete this command ***'
+        else
+          puts 'Delete this command'
+        end
+      end
+    end
+  end
+end

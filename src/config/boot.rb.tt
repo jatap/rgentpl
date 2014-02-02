@@ -1,0 +1,26 @@
+TEMPLATE_ROOT = "#{File.expand_path(File.dirname(__FILE__))}/.." unless defined?( TEMPLATE_ROOT )
+
+# <%= app_name.camelize %>
+module <%= app_name.camelize %>
+  # Run boot
+  #
+  # @return [void]
+  def self.boot
+    Boot.new.run
+  end
+
+  # Boot
+  #
+  # Launcher class
+  class Boot
+    # Launcher
+    #
+    # @return [void]
+    def run
+      require_relative '../lib/<%= app_name %>' unless defined?(<%= app_name.camelize %>.env)
+    end
+  end
+end
+
+# Run
+<%= app_name.camelize %>.boot

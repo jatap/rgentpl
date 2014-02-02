@@ -1,0 +1,9 @@
+# <%= app_name.camelize %>
+module <%= app_name.camelize %>
+  # Exception
+  module Exception
+    # Critical
+    class Critical
+    end
+  end
+end

@@ -1,0 +1,9 @@
+require 'spec_helper'
+
+describe <%= app_name.camelize %>::Application do
+  describe '#exec' do
+    it 'executes application' do
+      expect { <%= app_name.camelize %>::Application.exec }.to change { STDOUT }
+    end
+  end
+end

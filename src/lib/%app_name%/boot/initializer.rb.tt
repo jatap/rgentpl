@@ -1,0 +1,24 @@
+# <%= app_name.camelize %>
+module <%= app_name.camelize %>
+  # Initializer
+  #
+  # Load environment configuration file
+  module Initializer
+    # Build actions
+    #
+    # Actions
+    # - Load environment configuration file
+    # - Load initializers
+    #
+    # @return [void]
+    def self.build
+      require_relative "../../../config/environments/#{<%= app_name.camelize %>.env}.rb"
+
+      Dir[File.expand_path(File.join(File.dirname(__FILE__),
+                                     '../../../config/initializers/*.rb'))]
+        .each do |file|
+        require_relative file
+      end
+    end
+  end
+end

@@ -1,0 +1,25 @@
+require 'spec_helper'
+
+describe <%= app_name.camelize %> do
+  describe '.env' do
+    it 'shows current environment' do
+      expect(<%= app_name.camelize %>.env).to eq('test')
+    end
+
+    context 'when none default environment is supplied' do
+      before :each do
+        Object.send(:remove_const, :TEMPLATE_ENV)
+      end
+
+      it 'adds development environment' do
+        expect(<%= app_name.camelize %>.env).to eq('development')
+      end
+    end
+  end
+
+  describe '.logger' do
+    it 'is a Logger object' do
+      expect(<%= app_name.camelize %>.logger).to be_kind_of Logger
+    end
+  end
+end

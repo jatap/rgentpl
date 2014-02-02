@@ -1,0 +1,16 @@
+# <%= app_name.camelize %>
+module <%= app_name.camelize %>
+  # Application
+  #
+  # Main runner method
+  module Application
+    class << self
+      # Runner
+      #
+      # @return [Boolean] the runned state
+      def exec
+        <%= app_name.camelize %>::Command::Base.start
+      end
+    end
+  end
+end

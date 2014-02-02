@@ -1,0 +1,69 @@
+require File.expand_path('../lib/<%= app_name %>/version', __FILE__)
+
+Gem::Specification.new do |gem|
+  gem.name          = "<%= app_name %>"
+  gem.version       = <%= app_name.camelize %>::VERSION
+  gem.platform      = Gem::Platform::RUBY
+  gem.date          = '2014-02-02'
+  gem.summary       = %q{<%= app_name.camelize %>}
+  gem.description   = %q{<%= app_name.camelize %>}
+  gem.license       = "MIT"
+  gem.authors       = ["Julio Antúnez Tarín"]
+  gem.email         = "julio.antunez.tarin@gmail.com"
+  gem.homepage      = "https://github.com/jatap/<%= app_name %>#readme"
+
+  gem.files         = `git ls-files`.split($/)
+  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.require_paths = ['lib']
+
+  gem.add_dependency 'rake'
+  gem.add_dependency 'virtus'
+  gem.add_dependency 'thor'
+
+  gem.add_development_dependency 'bundler', '~> 1.0'
+  gem.add_development_dependency 'ruby_gntp'
+  gem.add_development_dependency 'growl'
+  gem.add_development_dependency 'listen'
+  gem.add_development_dependency 'guard'
+  gem.add_development_dependency 'guard-bundler', '>= 1.0.0'
+  gem.add_development_dependency 'guard-rspec', '>= 2.5.2'
+  gem.add_development_dependency 'guard-spork'
+  gem.add_development_dependency 'guard-rubocop'
+  gem.add_development_dependency 'guard-yard'
+  gem.add_development_dependency 'guard-cane'
+  gem.add_development_dependency 'rb-inotify', '>= 0.9.0'
+  gem.add_development_dependency 'rb-fsevent', '>= 0.9.3'
+  gem.add_development_dependency 'rb-fchange', '>= 0.0.6'
+  gem.add_development_dependency 'rubocop'
+  gem.add_development_dependency 'cane'
+  gem.add_development_dependency 'rcodetools'
+  gem.add_development_dependency 'fastri'
+  gem.add_development_dependency 'flay'
+  gem.add_development_dependency 'flog'
+  gem.add_development_dependency 'yard', '~> 0.8'
+  gem.add_development_dependency 'redcarpet'
+  gem.add_development_dependency 'rspec', '~> 2.4'
+  gem.add_development_dependency 'spork'
+  gem.add_development_dependency 'rake'
+  gem.add_development_dependency 'debugger'
+  gem.add_development_dependency 'simplecov'
+  gem.add_development_dependency 'simplecov-gem-adapter'
+  gem.add_development_dependency 'launchy'
+  gem.add_development_dependency 'capybara'
+  gem.add_development_dependency 'webrat'
+  gem.add_development_dependency 'rspec-nc'
+  gem.add_development_dependency 'rspec-abhakungszeichen-formatter'
+  gem.add_development_dependency 'nyan-cat-formatter'
+  gem.add_development_dependency 'fuubar'
+  gem.add_development_dependency 'ffaker'
+  gem.add_development_dependency 'pry'
+  gem.add_development_dependency 'pry-doc'
+  gem.add_development_dependency 'pry-remote'
+  gem.add_development_dependency 'pry-remote-auto'
+  gem.add_development_dependency 'pry-debugger'
+  gem.add_development_dependency 'awesome_print'
+  gem.add_development_dependency 'colorize'
+  gem.add_development_dependency 'bcrypt-ruby'
+
+end

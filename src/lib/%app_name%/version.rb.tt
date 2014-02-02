@@ -1,0 +1,5 @@
+# <%= app_name.camelize %>
+module <%= app_name.camelize %>
+  # Version
+  VERSION = '1.0.0'
+end
