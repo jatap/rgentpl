@@ -42,8 +42,17 @@ Usage
 
 As a command line application:
 
-    $ <path_to_rgentpl>/bin/rgentpl
+    $ git clone https://github.com/jatap/rgentpl.git
+    $ cd rgentpl
+    $ bin/rgentpl
 
 As a library/gem:
 
-    // TODO
+    $ gem install 'rgentpl'
+
+    Or
+
+    // Gemfile
+    gem 'rgentpl'
+
+    $ bundle install
