@@ -32,7 +32,7 @@ Spork.prefork do
   include <%= app_name.camelize %>
 
   RSpec.configure do |config|
-    config.include Rgentpl::Helper::Assertions
+    config.include <%= app_name.camelize %>::Helper::Assertions
 
     config.mock_with :rspec
 
