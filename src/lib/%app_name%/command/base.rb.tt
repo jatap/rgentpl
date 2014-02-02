@@ -8,20 +8,12 @@ module <%= app_name.camelize %>
     #
     # General command
     class Base < Thor
-      class_option :verbose, type: :boolean, aliases: '-v', default: false
+      map '-v' => :version
 
-      desc 'todo', 'TODO - Delete this command'
-      long_desc %q{
-      TODO
-      - Delete this command when clone this repository.
-      }
+      desc 'version, -v', 'Show <%= app_name.camelize %> version.'
       # @return [String] the test message
-      def todo
-        if options[:verbose]
-          puts '*** Delete this command ***'
-        else
-          puts 'Delete this command'
-        end
+      def version
+        say "<%= app_name.camelize %> version #{<%= app_name.camelize %>::VERSION}", :yellow
       end
     end
   end

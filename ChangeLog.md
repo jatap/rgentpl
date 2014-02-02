@@ -1,4 +1,12 @@
 
+1.0.1 / 2014-02-02
+==================
+
+ * Add a gems directory.
+ * Update README files.
+ * Fix yard tags in documentation.
+ * Optimize code.
+
 1.0.0 / 2014-02-02
 ==================
 

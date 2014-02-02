@@ -2,8 +2,6 @@
 module Rgentpl
   # Core Extensions
   module CoreExt
-    # String.class_eval do
-    # end
     String.class_eval do
       # Camelize
       #

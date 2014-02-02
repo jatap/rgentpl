@@ -16,6 +16,7 @@ module <%= app_name.camelize %>
     require f
   end
 
+  require_relative '<%= app_name %>/version'
   require_relative '<%= app_name %>/command/base'
   require_relative '<%= app_name %>/boot/initializer'
   require_relative '<%= app_name %>/boot/application'
