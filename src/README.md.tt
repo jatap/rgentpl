@@ -42,8 +42,17 @@ Usage
 
 As a command line application:
 
-    $ <path_to_<%= app_name %>>/bin/<%= app_name %>
+    $ git clone https://github.com/jatap/<%= app_name %>.git
+    $ cd <%= app_name %>
+    $ bin/<%= app_name %>
 
 As a library/gem:
 
-    // TODO
+    $ gem install '<%= app_name %>'
+
+Or
+
+    // Gemfile
+    gem '<%= app_name %>'
+
+    $ bundle install

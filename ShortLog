@@ -1,7 +1,4 @@
-Julio Antúnez Tarín (5):
-      First sending from ruby-template proyect.
-      Renaming from base repo.
-      Refactor load library (not binary file use) use case.
-      Merge branch 'feature-install' into develop
-      Merge conflicts.
+Julio Antúnez Tarín (2):
+      First sending.
+      Update README and LICENSE files.
 
