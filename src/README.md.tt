@@ -1,7 +1,7 @@
 Introduction
 ============
 
-**<%= app_name %>** is a Ruby library to generate a custom skeleton app.
+**<%= app_name %>** is a Ruby command line application.
 
 Directories
 ===========
@@ -37,23 +37,31 @@ Directories
 
     tmp/
 
+
+Installation
+============
+
+As a command line application:
+
+    $ git clone https://github.com/jatap/<%= app_name %>.git
+
+As a library/gem:
+
+    // Install on current gemset
+    $ gem install '<%= app_name %>'
+
+    // Or inside a Gemfile
+    gem '<%= app_name %>'
+    $ bundle install
+
+
 Usage
 =====
 
 As a command line application:
 
-    $ git clone https://github.com/jatap/<%= app_name %>.git
-    $ cd <%= app_name %>
-    $ bin/<%= app_name %>
+    $ <%= app_name %>
 
-As a library/gem:
+As a library:
 
-    $ gem install '<%= app_name %>'
-
-Or
-
-    // Gemfile
-    gem '<%= app_name %>'
-
-    $ bundle install
-    $ rgentpl
+    require '<%= app_name %>'
