@@ -4,30 +4,33 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
-# Ignore bundler config
-/.bundle
-
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
 Gemfile.lock
-/log/*.log
+/log/app.log
+/log/development.log
+/log/production.log
+/log/test.log
 /tmp/*
-pkg/
-# Rails
-.bundle
-db/*.sqlite3
-db/*.sqlite3-journal
-*.log
-tmp
-tmp/**/*
+.DS_Store
+Thumbs.db
+nbproject
+.project
+.redcar
+*.rbc
+*.swp
+*.swo
+
+# Gem packages
+pkg
+gems
 
 # Documentation
 doc/api
 doc/app
 .yardoc/*
-.yardopts
 coverage
 doc/*.html
 doc/*.css
@@ -36,7 +39,6 @@ doc/**/*.css
 doc/css
 doc/js
 doc/ActsAsMetatags
-.cane
 
 # Public Uploads
 public/system/*
@@ -49,19 +51,20 @@ public/system/*
 public/javascripts/cache
 public/stylesheets/cache
 public/refinery/*
-/cache
-/capybara*
-/capybara-*.html
-/gems
-/specifications
-
-# Vendor Cache
+cache
 vendor/cache
 
+# Testing
+capybara*
+specifications
+
 # Bundle state
-/.bundle
-/vendor/bundle/
-/vendor/ruby/
+.bundle
+vendor/bundle/
+vendor/ruby/
+
+# vendor/extensions dummy applications.
+vendor/extensions/**/spec/dummy
 
 # Acts as Indexed
 index/**/*
@@ -70,28 +73,6 @@ index/**/*
 *.tmproj
 *.autobackupbyrefinery.*
 refinerycms-*.gem
-
-# Mac
-.DS_Store
-
-# Windows
-Thumbs.db
-
-# NetBeans
-nbproject
-
-# Eclipse
-.project
-
-# Redcar
-.redcar
-
-# Rubinius
-*.rbc
-
-# Vim
-*.swp
-*.swo
 
 # RubyMine
 .idea
@@ -109,12 +90,9 @@ capybara-*html
 .sass-cache
 .sass-cache/*
 
-#rvm
+# rvm
 .rvmrc
 .rvmrc.*
-
-# vendor/extensions dummy applications.
-vendor/extensions/**/spec/dummy
 
 # CTags
 .tags*
@@ -130,9 +108,6 @@ gem-tags*
 # Code style files configuration
 .rubocop.yml
 
-# Documentation configurator
-.yard*
-
 # Webrat log
 webrat.log
 
@@ -140,7 +115,7 @@ webrat.log
 config/application.yml
 
 # Database configuration file
-/config/database.yml
+config/database.yml
 
 # Dummy test application
 spec/dummy/db/*.sqlite3
@@ -150,6 +125,3 @@ spec/dummy/.sass-cache
 
 # Secret Token
 config/initializers/secret_token.rb
-
-# Gem files
-bin/gems/*
