@@ -25,12 +25,14 @@ module Rgentpl
 
       class_option :app_path, type: :string,
                               required: true,
-                              desc: 'Application path',
-                              default: '/tmp'
+                              desc: 'Application path with current path as a default value',
+                              default: File.expand_path('.'),
+                              aliases: '-p'
       class_option :ctags, type: :string,
                            required: false,
-                           desc: 'Full CTags path command',
-                           default: '/usr/local/bin/ctags'
+                           desc: 'Full CTags path command with /usr/local/bin/ctags as a default value',
+                           default: '/usr/local/bin/ctags',
+                           aliases: '-t'
       # @return [void]
       def create_app
         @app_path = options['app_path']
@@ -45,12 +47,13 @@ module Rgentpl
 
       # @return [void]
       def git
-        run("cd #{app_path}/#{app_name} ;
-          git init; git add . ;
-          git ci -am 'First sending.' ;
-          git checkout -b develop ;
-          git checkout -b feature-domain-logic
-        ")
+        inside("#{app_path}/#{app_name}") do
+          run('git init')
+          run('git add .')
+          run('git commit -am "First sending."')
+          run('git checkout -b develop')
+          run('git checkout -b feature-domain-logic')
+        end
       end
     end
   end
