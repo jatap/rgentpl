@@ -35,7 +35,7 @@ describe <%= app_name.camelize %>::Configuration do
       end
 
       it 'updating and existing one' do
-        expect(<%= app_name.camelize %>.config.active).to be_false
+        expect(<%= app_name.camelize %>.config.active).to be_falsey
       end
     end
   end

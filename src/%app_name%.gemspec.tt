@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'virtus'
   gem.add_dependency 'thor'
 
-  gem.add_development_dependency 'bundler', '~> 1.0'
+  gem.add_development_dependency 'bundler', '>= 1.0'
   gem.add_development_dependency 'ruby_gntp'
   gem.add_development_dependency 'growl'
   gem.add_development_dependency 'listen'
@@ -43,12 +43,12 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'flog'
   gem.add_development_dependency 'yard', '~> 0.8'
   gem.add_development_dependency 'redcarpet'
-  gem.add_development_dependency 'rspec', '~> 2.4'
+  gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'spork'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'debugger'
   gem.add_development_dependency 'simplecov'
-  gem.add_development_dependency 'simplecov-gem-adapter'
+  gem.add_development_dependency 'simplecov-gem-profile'
   gem.add_development_dependency 'launchy'
   gem.add_development_dependency 'capybara'
   gem.add_development_dependency 'webrat'
@@ -64,6 +64,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'pry-debugger'
   gem.add_development_dependency 'awesome_print'
   gem.add_development_dependency 'colorize'
-  gem.add_development_dependency 'bcrypt-ruby'
+  gem.add_development_dependency 'bcrypt'
 
 end

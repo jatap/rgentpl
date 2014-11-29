@@ -5,4 +5,4 @@
 #--format RspecAbhakungszeichenFormatter
 #--format NyanCatWideFormatter
 --drb
---debug
+-rdebugger

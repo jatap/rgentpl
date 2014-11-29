@@ -4,5 +4,6 @@
 #--format nested
 #--format RspecAbhakungszeichenFormatter
 #--format NyanCatWideFormatter
---drb
---debug
+#--drb
+-rpry
+#-rdebugger

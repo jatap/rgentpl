@@ -1,16 +1,16 @@
 notification :growl
 
 # Spork
-guard 'spork',
-  rspec_env: { 'RAILS_ENV' => 'test' } do
-  watch('config/environment.rb')
-  watch('config/boot.rb')
-  watch(%r{^config/environments/.+\.rb$})
-  watch(%r{^config/initializers/.+\.rb$})
-  watch(%r{^lib/.+\.rb$})
-  watch('Gemfile.lock')
-  watch('spec/spec_helper.rb') { :rspec }
-end
+#guard :spork,
+  #rspec_env: { 'RAILS_ENV' => 'test' } do
+  #watch('config/environment.rb')
+  #watch('config/boot.rb')
+  #watch(%r{^config/environments/.+\.rb$})
+  #watch(%r{^config/initializers/.+\.rb$})
+  #watch(%r{^lib/.+\.rb$})
+  #watch('Gemfile.lock')
+  #watch('spec/spec_helper.rb') { :rspec }
+#end
 
 # Bundler
 guard :bundler do
@@ -18,14 +18,14 @@ guard :bundler do
 end
 
 # Cane
-guard :cane do
-  watch(%r{^(.+)\.rb$})
-end
+#guard :cane do
+  #watch(%r{^(.+)\.rb$})
+#end
 
 # Flog
-guard :flog do
-  watch(%r{^lib/.+\.rb$})
-end
+#guard :flog do
+  #watch(%r{^lib/.+\.rb$})
+#end
 
 # Rubocop
 guard :rubocop,
@@ -37,7 +37,7 @@ guard :rubocop,
 end
 
 # Yard
-guard 'yard' do
+guard :yard do
   watch(%r{lib/.+\.rb})
   watch(%r{vendor/.+\.rb})
 end

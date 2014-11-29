@@ -15,12 +15,11 @@ Spork.prefork do
 
   unless ENV['DRB']
     require 'simplecov'
-    require 'simplecov-gem-adapter'
+    require 'simplecov-gem-profile'
     SimpleCov.start 'gem'
   end
 
   require 'rspec'
-  require 'rspec/autorun'
   require 'capybara'
 
   require File.dirname(__FILE__) + '/../config/environment'
@@ -44,7 +43,7 @@ Spork.each_run do
   # This code will be run each time you run your specs.
   unless ENV['DRB']
     require 'simplecov'
-    require 'simplecov-gem-adapter'
+    require 'simplecov-gem-profile'
     SimpleCov.start 'gem'
   end
 end
