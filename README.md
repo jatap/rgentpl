@@ -1,6 +1,8 @@
 Introduction
 ============
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jatap/rgentpl?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 **rgentpl** is a Ruby library to generate a custom skeleton app.
 
 It's based on a great toolkit for building powerful command-line interfaces, [Thor](https://github.com/erikhuda/thor), and main goal is cover some basic good practices.
