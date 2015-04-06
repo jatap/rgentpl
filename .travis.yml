@@ -13,5 +13,5 @@ branches:
   only:
     - master
 
-bundler_args: --deployment --without development production console debug
+#bundler_args: --deployment --without development production console debug
 
