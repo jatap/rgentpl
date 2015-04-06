@@ -1,4 +1,4 @@
-Julio Antúnez Tarín (19):
+Julio Antúnez Tarín (26):
       First sending.
       Update README and LICENSE files.
       Bumped to version 1.0.0.
@@ -18,4 +18,11 @@ Julio Antúnez Tarín (19):
       Bumped to version 1.0.3.
       Merge branch 'release-1.0.3' into develop
       Fix commands.
+      Bumped to version number 1.0.4.
+      Merge branch 'release-1.0.4' into develop
+      Update new development and testing requirements.
+      Update gems (metrics, tasks).
+      Fix application loader spec.
+      Add new version.
+      Merge branch 'feature-metrics' into develop
 
