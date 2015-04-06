@@ -1,3 +1,10 @@
+1.0.5 / 2015-04-06
+==================
+
+  * Add new version.
+  * Fix application loader spec.
+  * Update gems (metrics, tasks).
+  * Update new development and testing requirements.
 
 1.0.4 / 2014-02-08
 ==================
