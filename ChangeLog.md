@@ -1,4 +1,9 @@
 
+1.0.7 / 2015-04-06
+==================
+
+  * Avoid bundle args in travis configuration file.
+
 1.0.6 / 2015-04-06
 ==================
 
