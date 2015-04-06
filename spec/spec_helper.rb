@@ -4,8 +4,6 @@ require 'rubygems'
 require 'spork'
 require 'pry'
 
-require 'spork/ext/ruby-debug'
-
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
@@ -15,7 +13,7 @@ Spork.prefork do
 
   unless ENV['DRB']
     require 'simplecov'
-    require 'simplecov-gem-profile'
+    require 'simplecov-gem-adapter'
     SimpleCov.start 'gem'
   end
 
@@ -43,7 +41,7 @@ Spork.each_run do
   # This code will be run each time you run your specs.
   unless ENV['DRB']
     require 'simplecov'
-    require 'simplecov-gem-profile'
+    require 'simplecov-gem-adapter'
     SimpleCov.start 'gem'
   end
 end

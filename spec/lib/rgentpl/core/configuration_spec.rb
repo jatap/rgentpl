@@ -35,7 +35,7 @@ describe Rgentpl::Configuration do
       end
 
       it 'updating and existing one' do
-        expect(Rgentpl.config.active).to be_false
+        expect(Rgentpl.config.active).to be_falsey
       end
     end
   end

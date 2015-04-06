@@ -13,6 +13,7 @@ Gemfile.lock
 /log/development.log
 /log/production.log
 /log/test.log
+/log/yard.log
 /tmp/*
 .DS_Store
 Thumbs.db
@@ -28,6 +29,7 @@ pkg
 gems
 
 # Documentation
+doc/rdoc
 doc/api
 doc/app
 .yardoc/*
