@@ -1,9 +1,7 @@
---colour
---format NyanCatFormatter
---format Nc
-#--format nested
-#--format RspecAbhakungszeichenFormatter
-#--format NyanCatWideFormatter
-#--drb
 -rpry
-#-rdebugger
+--colour
+--require spec_helper
+--format documentation
+--format Nc
+--format Fuubar
+#--format NyanCatFormatter

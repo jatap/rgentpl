@@ -1,0 +1,3 @@
+== Rgentpl
+
+rgentpl is a Ruby library to generate a custom skeleton app.
