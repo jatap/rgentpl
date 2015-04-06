@@ -1,4 +1,4 @@
-Julio Antúnez Tarín (26):
+Julio Antúnez Tarín (29):
       First sending.
       Update README and LICENSE files.
       Bumped to version 1.0.0.
@@ -25,4 +25,7 @@ Julio Antúnez Tarín (26):
       Fix application loader spec.
       Add new version.
       Merge branch 'feature-metrics' into develop
+      Bumped to version 1.0.5.
+      Merge branch 'release-1.0.5' into develop
+      Dummy update to launch travis.
 
