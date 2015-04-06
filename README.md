@@ -3,6 +3,8 @@ Introduction
 
 **rgentpl** is a Ruby library to generate a custom skeleton app.
 
+[![Build Status](https://travis-ci.org/jatap/rgentpl.png)](https://travis-ci.org/jatap/rgentpl)
+
 It's based on a great toolkit for building powerful command-line interfaces, [Thor](https://github.com/erikhuda/thor), and main goal is cover some basic good practices.
 
 Directories
