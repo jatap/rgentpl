@@ -10,6 +10,9 @@ module Rgentpl
     class Generate < Thor::Group
       include Thor::Actions
 
+      APP_PATH_DESC = 'Application path with current path as a default value'
+      CTAGS_DESC    = 'Full CTags path command (default: /usr/local/bin/ctags)'
+
       # @return [String] the final install application path
       attr_accessor :app_path
       # @return [String] the ctags full binary path
@@ -25,12 +28,12 @@ module Rgentpl
 
       class_option :app_path, type: :string,
                               required: true,
-                              desc: 'Application path with current path as a default value',
+                              desc: APP_PATH_DESC,
                               default: File.expand_path('.'),
                               aliases: '-p'
       class_option :ctags, type: :string,
                            required: false,
-                           desc: 'Full CTags path command with /usr/local/bin/ctags as a default value',
+                           desc: CTAGS_DESC,
                            default: '/usr/local/bin/ctags',
                            aliases: '-t'
       # @return [void]
