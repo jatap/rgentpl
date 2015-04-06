@@ -1,4 +1,4 @@
-Julio Antúnez Tarín (35):
+Julio Antúnez Tarín (38):
       First sending.
       Update README and LICENSE files.
       Bumped to version 1.0.0.
@@ -34,4 +34,7 @@ Julio Antúnez Tarín (35):
       Bumped to version 1.0.7.
       Merge branch 'release-1.0.7' into develop
       Clean travis configuration file.
+      Bumped to version 1.0.8.
+      Merge branch 'release-1.0.8' into develop
+      Update README.md with travis build info.
 
