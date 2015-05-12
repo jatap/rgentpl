@@ -34,7 +34,7 @@ describe Rgentpl::Configuration do
         expect(Rgentpl.config.new_amazing_key).to eq 'some value'
       end
 
-      it 'updating and existing one' do
+      it 'updating an existing one' do
         expect(Rgentpl.config.active).to be_falsey
       end
     end

@@ -34,7 +34,7 @@ describe <%= app_name.camelize %>::Configuration do
         expect(<%= app_name.camelize %>.config.new_amazing_key).to eq 'some value'
       end
 
-      it 'updating and existing one' do
+      it 'updating an existing one' do
         expect(<%= app_name.camelize %>.config.active).to be_falsey
       end
     end
