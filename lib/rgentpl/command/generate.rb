@@ -10,7 +10,9 @@ module Rgentpl
     class Generate < Thor::Group
       include Thor::Actions
 
+      # Application path description
       APP_PATH_DESC = 'Application path with current path as a default value'
+      # CTags description
       CTAGS_DESC    = 'Full CTags path command (default: /usr/local/bin/ctags)'
 
       # @return [String] the final install application path
