@@ -11,6 +11,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Julio Antúnez Tarín"]
   gem.email         = "julio.antunez.tarin@gmail.com"
   gem.homepage      = "https://github.com/jatap/rgentpl#readme"
+  gem.executables   = ["rgentpl"]
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
