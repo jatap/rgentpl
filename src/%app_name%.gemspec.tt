@@ -4,7 +4,7 @@ Gem::Specification.new do |gem|
   gem.name          = "<%= app_name %>"
   gem.version       = <%= app_name.camelize %>::VERSION
   gem.platform      = Gem::Platform::RUBY
-  gem.date          = '2015-04-05'
+  gem.date          = '2015-05-12'
   gem.summary       = %q{<%= app_name.camelize %>}
   gem.description   = %q{<%= app_name.camelize %>}
   gem.license       = "MIT"

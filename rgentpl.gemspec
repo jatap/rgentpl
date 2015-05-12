@@ -4,7 +4,7 @@ Gem::Specification.new do |gem|
   gem.name          = "rgentpl"
   gem.version       = Rgentpl::VERSION
   gem.platform      = Gem::Platform::RUBY
-  gem.date          = '2015-04-05'
+  gem.date          = '2015-05-12'
   gem.summary       = %q{Ruby Skeleton Generator}
   gem.description   = %q{Ruby Skeleton Generator based in templates}
   gem.license       = "MIT"

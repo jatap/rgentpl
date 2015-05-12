@@ -1,4 +1,20 @@
 
+1.1.0 / 2015-05-12
+==================
+
+  * Delete Spork references.
+  * Fix code metrics.
+  * Fix yard recommendations.
+  * Update gitignore file to exclude empty spec support directory.
+  * Fix typo in base spec file.
+  * Delete old spec assertions file.
+  * Add rubycritic as a default task instead of rspec.
+  * Fix typo in configuration spec.
+  * Refactoring capture stdout specs (new RSpec 3.0 feature).
+  * Add package name to base thor class.
+  * Add executables in gemspec file.
+  * Specify ruby version on Gemfile.
+
 1.0.9 / 2015-04-06
 ==================
 
