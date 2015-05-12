@@ -20,8 +20,8 @@ describe <%= app_name.camelize %>::Command::Base do
 
   describe 'given a version option' do
     it 'shows version info' do
-      expect { <%= app_name.camelize %>::Command::Base.start %W[ vrsion ] }.to \
-        output(/help/).to_stdout
+      expect { <%= app_name.camelize %>::Command::Base.start %W[ version ] }.to \
+        output(/version/).to_stdout
     end
   end
 end
