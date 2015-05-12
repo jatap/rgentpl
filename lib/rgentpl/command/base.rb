@@ -8,6 +8,7 @@ module Rgentpl
     #
     # General command
     class Base < Thor
+      package_name "Rgentpl"
       map '-v' => :version
 
       desc 'version, -v', 'Show Ruby Generator Template version.'
