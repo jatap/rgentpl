@@ -29,8 +29,6 @@ Spork.prefork do
   include <%= app_name.camelize %>
 
   RSpec.configure do |config|
-    config.include <%= app_name.camelize %>::Helper::Assertions
-
     config.mock_with :rspec
 
     config.order = 'random'

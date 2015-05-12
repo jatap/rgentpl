@@ -29,8 +29,6 @@ Spork.prefork do
   include Rgentpl
 
   RSpec.configure do |config|
-    config.include Rgentpl::Helper::Assertions
-
     config.mock_with :rspec
 
     config.order = 'random'
