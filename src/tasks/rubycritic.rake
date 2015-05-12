@@ -8,4 +8,6 @@ namespace :rubycritic do
     sh('rubycritic lib')
     puts '- Process has finished.'.green
   end
+
+  task :default => [:check]
 end
