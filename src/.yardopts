@@ -1,1 +1,1 @@
---protected --private --output-dir doc/api
+--quiet --protected --private --output-dir doc/api

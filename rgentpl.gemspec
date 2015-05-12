@@ -4,13 +4,14 @@ Gem::Specification.new do |gem|
   gem.name          = "rgentpl"
   gem.version       = Rgentpl::VERSION
   gem.platform      = Gem::Platform::RUBY
-  gem.date          = '2015-04-05'
+  gem.date          = '2015-05-12'
   gem.summary       = %q{Ruby Skeleton Generator}
   gem.description   = %q{Ruby Skeleton Generator based in templates}
   gem.license       = "MIT"
   gem.authors       = ["Julio Antúnez Tarín"]
   gem.email         = "julio.antunez.tarin@gmail.com"
   gem.homepage      = "https://github.com/jatap/rgentpl#readme"
+  gem.executables   = ["rgentpl"]
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -28,7 +29,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'guard'
   gem.add_development_dependency 'guard-bundler'
   gem.add_development_dependency 'guard-rspec'
-  gem.add_development_dependency 'guard-spork'
   gem.add_development_dependency 'guard-rubocop'
   gem.add_development_dependency 'guard-yard'
   gem.add_development_dependency 'guard-cane'
@@ -49,7 +49,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'sdoc-templates-42floors'
   gem.add_development_dependency 'redcarpet'
   gem.add_development_dependency 'rspec', '>= 3.2'
-  gem.add_development_dependency 'spork'
   gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'simplecov-gem-adapter'
   gem.add_development_dependency 'selenium-webdriver'

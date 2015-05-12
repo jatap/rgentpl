@@ -3,10 +3,11 @@ require 'spec_helper'
 describe <%= app_name.camelize %>::Application do
   describe '#exec' do
     it 'executes application' do
-      stdout = capture_stdout do
-        <%= app_name.camelize %>::Application.exec
-      end
-      expect(stdout).to match /Commands:/
+      # Fix rake_taks bug
+      ARGV = []
+
+      expect { <% app_name.camelize %>::Application.exec }.to \
+        output(/commands:/).to_stdout
     end
   end
 end

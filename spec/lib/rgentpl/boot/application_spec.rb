@@ -3,10 +3,10 @@ require 'spec_helper'
 describe Rgentpl::Application do
   describe '#exec' do
     it 'executes application' do
-      stdout = capture_stdout do
-        Rgentpl::Application.exec
-      end
-      expect(stdout).to match /Commands:/
+      # Fix rake_taks bug
+      ARGV = []
+
+      expect { Rgentpl::Application.exec }.to output(/commands:/).to_stdout
     end
   end
 end

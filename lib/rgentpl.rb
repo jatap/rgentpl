@@ -6,14 +6,14 @@ require 'logger'
 module Rgentpl
   # Loading core extensions
   Dir["#{File.dirname(__FILE__)}/../lib/rgentpl/core_ext/*.rb"]
-    .each do |f|
-    require f
+    .each do |file|
+    require file
   end
 
   # Loading exception
   Dir["#{File.dirname(__FILE__)}/../lib/rgentpl/exception/*.rb"]
-    .each do |f|
-    require f
+    .each do |file|
+    require file
   end
 
   require_relative 'rgentpl/version'

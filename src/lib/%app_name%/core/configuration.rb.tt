@@ -3,13 +3,13 @@ module <%= app_name.camelize %>
   class << self
     # Configure
     #
-    # @param block [Proc] the configuration options
+    # @param _block [Proc] the configuration options
     # @raise [NoMethodError] when new options are inside configuration block
     # @return [<%= app_name.camelize %>::Configuration] the configuration
-    def configure(&block)
+    def configure(&_block)
       yield @config ||= <%= app_name.camelize %>::Configuration.new
-    rescue NoMethodError => e
-      add_new_attribute_from_exception e
+    rescue NoMethodError => exc
+      add_new_attribute_from_exception exc
     end
 
     # Configuration object
@@ -21,14 +21,24 @@ module <%= app_name.camelize %>
 
     # Add new attribute in configuration block
     #
-    # @param e [NoMethodError] the exception
+    # @param exc [NoMethodError] the exception
     # @return [void]
-    def add_new_attribute_from_exception(e)
-      method = e.name.to_s.gsub(/=$/, '')
-      @config.extend Virtus.model
-      @config.attribute method.to_sym, String, default: e.args.first
-      @config.send(e.name, e.args.first)
+    def add_new_attribute_from_exception(exc)
+      add_new_attribute(exc, exc.name.to_s.gsub(/=$/, ''))
     end
+
+    # Implementation for adding new attribute in configuration block
+    #
+    # @param exc [NoMethodError] the exception
+    # @param method [String] the writter method name
+    # @return [void]
+    def add_new_attribute(exc, method)
+      @config.extend Virtus.model
+      @config.attribute method.to_sym, String, default: exc.args.first,
+                                               lazy: true
+      @config.send(exc.name, exc.args.first)
+    end
+    private :add_new_attribute
   end
 
   # Configuration
