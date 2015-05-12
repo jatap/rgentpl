@@ -59,6 +59,8 @@ vendor/cache
 # Testing
 capybara*
 specifications
+!spec/support/.gitkeep
+!src/%app_name%.gemspec.tt/spec/support/.gitkeep
 
 # Bundle state
 .bundle
