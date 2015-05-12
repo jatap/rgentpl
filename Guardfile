@@ -1,17 +1,5 @@
 notification :growl
 
-# Spork
-guard 'spork',
-  rspec_env: { 'RAILS_ENV' => 'test' } do
-  watch('config/environment.rb')
-  watch('config/boot.rb')
-  watch(%r{^config/environments/.+\.rb$})
-  watch(%r{^config/initializers/.+\.rb$})
-  watch(%r{^lib/.+\.rb$})
-  watch('Gemfile.lock')
-  watch('spec/spec_helper.rb') { :rspec }
-end
-
 # Bundler
 guard :bundler do
   watch('Gemfile')
