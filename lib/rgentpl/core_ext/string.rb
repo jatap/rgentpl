@@ -7,14 +7,14 @@ module Rgentpl
       #
       # @return [String] the camelized string
       def camelize
-        split(/\s|-|_/).each { |s| s.capitalize! }.join('')
+        split(/\s|-|_/).each(&:capitalize!).join('')
       end
 
       # Camelize!
       #
       # @return [String] the camelized string
       def camelize!
-        replace(split(/\s|-|_/).each { |s| s.capitalize! }.join(''))
+        replace(split(/\s|-|_/).each(&:capitalize!).join(''))
       end
     end
   end

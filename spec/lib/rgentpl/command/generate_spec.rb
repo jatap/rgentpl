@@ -5,7 +5,7 @@ describe Rgentpl::Command::Generate do
   let(:app) { 'test_app' }
 
   before do
-    Rgentpl::Command::Base.start %W[generate #{app}]
+    Rgentpl::Command::Base.start %W( generate #{app} )
   end
 
   let(:path) do
@@ -14,7 +14,7 @@ describe Rgentpl::Command::Generate do
   let(:file) { "#{path}/#{app}" }
 
   after do
-    FileUtils.rm_rf(file) if File.exists?(file)
+    FileUtils.rm_rf(file) if File.exist?(file)
   end
 
   describe '#source_root' do
@@ -26,7 +26,7 @@ describe Rgentpl::Command::Generate do
 
   describe '.create_app' do
     it 'adds a new directory with defined structure' do
-      expect(File.exists?(file)).to be
+      expect(File.exist?(file)).to be
     end
   end
 

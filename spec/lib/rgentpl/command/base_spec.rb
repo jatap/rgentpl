@@ -20,7 +20,7 @@ describe Rgentpl::Command::Base do
 
   describe 'given a version option' do
     it 'shows version info' do
-      expect { Rgentpl::Command::Base.start %W[ version ] }.to \
+      expect { Rgentpl::Command::Base.start %w( version ) }.to \
         output(/version/).to_stdout
     end
   end
