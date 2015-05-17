@@ -30,7 +30,7 @@ set :default_env, {}
 set :keep_releases, 5
 
 # Rvm
-set :rvm_ruby_version, '2.1.5'
+set :rvm_ruby_version, '2.2.1'
 set :rvm_custom_path, '/usr/local/rvm'
 
 # Bundle
