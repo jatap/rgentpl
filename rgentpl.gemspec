@@ -22,7 +22,7 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency 'virtus'
   gem.add_runtime_dependency 'thor'
 
-  gem.add_development_dependency 'bundler', '>= 1.7'
+  gem.add_development_dependency 'bundler', '>= 1.9'
   gem.add_development_dependency 'ruby_gntp'
   gem.add_development_dependency 'growl'
   gem.add_development_dependency 'listen'
