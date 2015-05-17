@@ -1,4 +1,4 @@
-Julio Antúnez Tarín (38):
+Julio Antúnez Tarín (53):
       First sending.
       Update README and LICENSE files.
       Bumped to version 1.0.0.
@@ -37,4 +37,19 @@ Julio Antúnez Tarín (38):
       Bumped to version 1.0.8.
       Merge branch 'release-1.0.8' into develop
       Update README.md with travis build info.
+      Bumped to version 1.0.9.
+      Merge branch 'release-1.0.9' into develop
+      Specify ruby version on Gemfile.
+      Add executables in gemspec file.
+      Add package name to base thor class.
+      Refactoring capture stdout specs (new RSpec 3.0 feature).
+      Fix typo in configuration spec.
+      Add rubycritic as a default task instead of rspec.
+      Delete old spec assertions file.
+      Fix typo in base spec file.
+      Update gitignore file to exclude empty spec support directory.
+      Fix yard recommendations.
+      Fix code metrics.
+      Delete Spork references.
+      Add deploy (raw).
 
