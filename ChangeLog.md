@@ -1,4 +1,11 @@
 
+1.2.2 / 2015-05-17
+==================
+
+  * Update ruby dependencies.
+  * Update bundler version.
+  * Update code metrics.
+
 1.2.1 / 2015-05-17
 ==================
 
