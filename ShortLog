@@ -1,4 +1,4 @@
-Julio Antúnez Tarín (53):
+Julio Antúnez Tarín (56):
       First sending.
       Update README and LICENSE files.
       Bumped to version 1.0.0.
@@ -52,4 +52,7 @@ Julio Antúnez Tarín (53):
       Fix code metrics.
       Delete Spork references.
       Add deploy (raw).
+      Bumped to version number 1.2.0.
+      Merge branch 'release-1.2.0' into develop
+      Clean code (deploy).
 
