@@ -2,7 +2,7 @@
 set :application, 'rgentpl'
 
 # Git repo URL
-set :repo_url, 'git@github.com:jatap/rgentpl.git'
+set :repo_url, 'git@github.com:example/<%= app_name %>.git'
 
 # Stages
 set :stages, %w(staging production)
