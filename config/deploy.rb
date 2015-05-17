@@ -24,20 +24,20 @@ set :linked_files, fetch(:linked_files, [])
 set :linked_dirs, fetch(:linked_dirs, [])
 
 # Default value for default_env is {}
-set :default_env, { }
+set :default_env, {}
 
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
 # Rvm
-set :rvm_ruby_version, '2.1.5'
+set :rvm_ruby_version, '2.2.1'
 set :rvm_custom_path, '/usr/local/rvm'
 
 # Bundle
-set :bundle_env_variables, { }
+set :bundle_env_variables, {}
 set :bundle_gemfile, -> { release_path.join('Gemfile') }
 set :bundle_dir, -> { shared_path.join('bundle') }
 set :bundle_flags, '--quiet'
-set :bundle_without, %w{development test}.join(' ')
+set :bundle_without, %w(development test).join(' ')
 set :bundle_jobs, 4
 set :bundle_roles, :all
