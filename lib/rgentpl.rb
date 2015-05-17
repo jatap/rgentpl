@@ -1,3 +1,5 @@
+require 'rubygems'
+require 'bundler/setup'
 require 'virtus'
 require 'thor'
 require 'logger'
