@@ -18,11 +18,11 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
-  gem.add_dependency 'rake'
-  gem.add_dependency 'virtus'
-  gem.add_dependency 'thor'
+  gem.add_runtime_dependency 'rake'
+  gem.add_runtime_dependency 'virtus'
+  gem.add_runtime_dependency 'thor'
 
-  gem.add_development_dependency 'bundler', '>= 1.0'
+  gem.add_development_dependency 'bundler', '>= 1.7'
   gem.add_development_dependency 'ruby_gntp'
   gem.add_development_dependency 'growl'
   gem.add_development_dependency 'listen'
@@ -67,6 +67,8 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'awesome_print'
   gem.add_development_dependency 'colorize'
   gem.add_development_dependency 'bcrypt-ruby'
-
+  gem.add_development_dependency 'capistrano', '>= 3.4.0'
+  gem.add_development_dependency 'capistrano-rvm'
+  gem.add_development_dependency 'capistrano-bundler', '>= 1.1.2'
 end
 
