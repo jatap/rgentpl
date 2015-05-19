@@ -13,7 +13,7 @@ describe <%= app_name.camelize %>::Command::Base do
 
   describe 'given a help option' do
     it 'shows help info' do
-      camelize = <% app_name.camelize %>
+      camelize = <%= app_name.camelize %>
       expect { camelize::Command::Base.help(Thor::Base.shell.new) }.to \
         output(/help/).to_stdout
     end
@@ -21,7 +21,7 @@ describe <%= app_name.camelize %>::Command::Base do
 
   describe 'given a version option' do
     it 'shows version info' do
-      camelize = <% app_name.camelize %>
+      camelize = <%= app_name.camelize %>
       expect { camelize::Command::Base.start %w( version ) }.to \
         output(/version/).to_stdout
     end

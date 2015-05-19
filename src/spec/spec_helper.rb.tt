@@ -6,9 +6,9 @@ require 'pry'
 ENV['RUBY_ENV'] ||= 'test'
 
 unless ENV['DRB']
-require 'simplecov'
-require 'simplecov-gem-adapter'
-SimpleCov.start 'gem'
+  require 'simplecov'
+  require 'simplecov-gem-adapter'
+  SimpleCov.start 'gem'
 end
 
 require 'rspec'
@@ -23,7 +23,7 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 include <%= app_name.camelize %>
 
 RSpec.configure do |config|
-config.mock_with :rspec
+  config.mock_with :rspec
 
-config.order = 'random'
+  config.order = 'random'
 end
