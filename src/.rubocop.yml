@@ -4,9 +4,9 @@ AllCops:
     - Rakefile
     - config.ru
   Exclude:
-    - db/**
-    - config/**
-    - tmp/**
+    - db/**/*
+    - config/**/*
+    - tmp/**/*
 
 # Avoid methods longer than 30 lines of code
 MethodLength:
