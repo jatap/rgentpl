@@ -1,4 +1,4 @@
-Julio Antúnez Tarín (67):
+Julio Antúnez Tarín (70):
       First sending.
       Update README and LICENSE files.
       Bumped to version 1.0.0.
@@ -66,4 +66,7 @@ Julio Antúnez Tarín (67):
       Bumped to version number 1.2.3.
       Merge branch 'release-1.2.3' into develop
       Add a tmp file to keep tmp directory in version control.
+      Bumped to version number 1.2.4.
+      Merge branch 'release-1.2.4' into develop
+      Add tmp directory to src.
 

@@ -41,7 +41,6 @@ doc/**/*.html
 doc/**/*.css
 doc/css
 doc/js
-doc/ActsAsMetatags
 
 # Public Uploads
 public/system/*
