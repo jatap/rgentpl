@@ -1,4 +1,9 @@
 
+1.2.4.3 / 2015-05-19
+====================
+
+  * Add gitkeep file to tmp directory in src structure.
+
 1.2.4.2 / 2015-05-19
 ====================
 
