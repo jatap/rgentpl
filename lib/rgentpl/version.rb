@@ -4,5 +4,5 @@
 #
 module Rgentpl
   # Version
-  VERSION = '1.2.4.3'
+  VERSION = '1.2.5'
 end
