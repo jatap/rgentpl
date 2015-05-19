@@ -1,4 +1,9 @@
 
+1.2.4 / 2015-05-19
+==================
+
+  * Add a tmp file to keep tmp directory in version control.
+
 1.2.3 / 2015-05-17
 ==================
 
