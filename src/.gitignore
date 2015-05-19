@@ -15,6 +15,7 @@ Gemfile.lock
 /log/test.log
 /log/yard.log
 /tmp/*
+!/tmp/.gitkeep
 .DS_Store
 Thumbs.db
 nbproject
@@ -40,7 +41,6 @@ doc/**/*.html
 doc/**/*.css
 doc/css
 doc/js
-doc/ActsAsMetatags
 
 # Public Uploads
 public/system/*
@@ -59,6 +59,8 @@ vendor/cache
 # Testing
 capybara*
 specifications
+!spec/support/.gitkeep
+!src/%app_name%.gemspec.tt/spec/support/.gitkeep
 
 # Bundle state
 .bundle
@@ -127,3 +129,4 @@ spec/dummy/.sass-cache
 
 # Secret Token
 config/initializers/secret_token.rb
+
