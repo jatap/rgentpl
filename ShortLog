@@ -1,4 +1,4 @@
-Julio Antúnez Tarín (79):
+Julio Antúnez Tarín (82):
       First sending.
       Update README and LICENSE files.
       Bumped to version 1.0.0.
@@ -78,4 +78,7 @@ Julio Antúnez Tarín (79):
       Bumped to version number 1.2.4.3.
       Merge branch 'release-1.2.4.3' into develop
       Update rubocop configuration file in src.
+      Bumped to version number 1.2.5.
+      Merge branch 'release-1.2.5' into develop
+      Fix spec files in src.
 
