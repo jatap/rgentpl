@@ -1,4 +1,4 @@
-Julio Antúnez Tarín (64):
+Julio Antúnez Tarín (67):
       First sending.
       Update README and LICENSE files.
       Bumped to version 1.0.0.
@@ -63,4 +63,7 @@ Julio Antúnez Tarín (64):
       Bumped to version number 1.2.2.
       Merge branch 'release-1.2.2' into develop
       Update ruby version file.
+      Bumped to version number 1.2.3.
+      Merge branch 'release-1.2.3' into develop
+      Add a tmp file to keep tmp directory in version control.
 
