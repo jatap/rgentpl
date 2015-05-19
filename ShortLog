@@ -1,4 +1,4 @@
-Julio Antúnez Tarín (76):
+Julio Antúnez Tarín (79):
       First sending.
       Update README and LICENSE files.
       Bumped to version 1.0.0.
@@ -75,4 +75,7 @@ Julio Antúnez Tarín (76):
       Bumped to version number 1.2.4.1.
       Merge branch 'release-1.2.4.2' into develop
       Add gitkeep file to tmp directory in src structure.
+      Bumped to version number 1.2.4.3.
+      Merge branch 'release-1.2.4.3' into develop
+      Update rubocop configuration file in src.
 
