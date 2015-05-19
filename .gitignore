@@ -15,6 +15,7 @@ Gemfile.lock
 /log/test.log
 /log/yard.log
 /tmp/*
+!/tmp/.gitkeep
 .DS_Store
 Thumbs.db
 nbproject
