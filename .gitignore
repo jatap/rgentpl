@@ -5,17 +5,17 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
+db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
 Gemfile.lock
-/log/app.log
-/log/development.log
-/log/production.log
-/log/test.log
-/log/yard.log
-/tmp/*
-!/tmp/.gitkeep
+log/app.log
+log/development.log
+log/production.log
+log/test.log
+log/yard.log
+tmp/*
+!tmp/.gitkeep
 .DS_Store
 Thumbs.db
 nbproject
@@ -42,17 +42,7 @@ doc/**/*.css
 doc/css
 doc/js
 
-# Public Uploads
-public/system/*
-public/themes/*
-public/cache
-public/stylesheets/compiled
-public/system/*
-
 # Public Cache
-public/javascripts/cache
-public/stylesheets/cache
-public/refinery/*
 cache
 vendor/cache
 
@@ -69,14 +59,6 @@ vendor/ruby/
 
 # vendor/extensions dummy applications.
 vendor/extensions/**/spec/dummy
-
-# Acts as Indexed
-index/**/*
-
-# Refinery Specific
-*.tmproj
-*.autobackupbyrefinery.*
-refinerycms-*.gem
 
 # RubyMine
 .idea
@@ -108,9 +90,6 @@ gem-tags*
 
 # Sublime project files
 *.sublime-*
-
-# Code style files configuration
-.rubocop.yml
 
 # Webrat log
 webrat.log
