@@ -1,6 +1,8 @@
 Introduction
 ============
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jatap/rgentpl?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 **rgentpl** is a Ruby library to generate a custom skeleton app.
 
 [![Build Status](https://travis-ci.org/jatap/rgentpl.png)](https://travis-ci.org/jatap/rgentpl)
