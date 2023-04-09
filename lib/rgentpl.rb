@@ -1,8 +1,8 @@
-require 'rubygems'
-require 'bundler/setup'
-require 'virtus'
-require 'thor'
-require 'logger'
+require "rubygems"
+require "bundler/setup"
+require "virtus"
+require "thor"
+require "logger"
 
 # Rgentpl
 module Rgentpl
@@ -18,21 +18,19 @@ module Rgentpl
     require file
   end
 
-  require_relative 'rgentpl/version'
-  require_relative 'rgentpl/command/generate'
-  require_relative 'rgentpl/command/base'
-  require_relative 'rgentpl/boot/initializer'
-  require_relative 'rgentpl/boot/application'
-  require_relative 'rgentpl/core/configuration'
+  require_relative "rgentpl/version"
+  require_relative "rgentpl/command/generate"
+  require_relative "rgentpl/command/base"
+  require_relative "rgentpl/boot/initializer"
+  require_relative "rgentpl/boot/application"
+  require_relative "rgentpl/core/configuration"
 
   class << self
     # Environment
     #
     # @return [String] the current environment
     def env
-      unless defined?(TEMPLATE_ENV)
-        load File.expand_path('../../config/environment.rb',  __FILE__)
-      end
+      load File.expand_path("../config/environment.rb", __dir__) unless defined?(TEMPLATE_ENV)
       TEMPLATE_ENV
     end
 
