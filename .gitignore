@@ -8,7 +8,6 @@
 db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
-Gemfile.lock
 log/app.log
 log/development.log
 log/production.log
