@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe <%= app_name.camelize %>::CoreExt do
-  let(:str) { String.new('My custom string') }
+  let(:str) { +"My custom string" }
   let(:result) { 'MyCustomString' }
 
   describe '.camelize' do

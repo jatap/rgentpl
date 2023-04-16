@@ -20,7 +20,7 @@ module Rgentpl
       # Add generate group command
       register(Rgentpl::Command::Generate,
         "generate",
-        "generate APP_NAME [-p|--app_path APP_PATH] [-t|--ctags CTAGS]",
+        "generate APP_NAME [-p|--app_path APP_PATH]",
         "Generate application")
     end
   end

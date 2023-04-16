@@ -29,10 +29,8 @@ module <%= app_name.camelize %>
     #
     # @return [String] the current environment
     def env
-      unless defined?(TEMPLATE_ENV)
-        load File.expand_path('../../config/environment.rb',  __FILE__)
-      end
-      TEMPLATE_ENV
+      load File.expand_path("../config/environment.rb", __dir__) unless ENV.include? "TEMPLATE_ENV"
+      ENV["TEMPLATE_ENV"]
     end
 
     # Logger

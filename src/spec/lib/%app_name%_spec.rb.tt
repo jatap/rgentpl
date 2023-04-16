@@ -8,7 +8,7 @@ describe <%= app_name.camelize %> do
 
     context 'when none default environment is supplied' do
       before :each do
-        Object.send(:remove_const, :TEMPLATE_ENV)
+        ENV.delete "TEMPLATE_ENV"
       end
 
       it 'adds development environment' do

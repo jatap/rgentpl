@@ -24,7 +24,7 @@ module Rgentpl
     # @param exc [NoMethodError] the exception
     # @return [void]
     def add_new_attribute_from_exception(exc)
-      add_new_attribute(exc, exc.name.to_s.gsub(/=$/, ''))
+      add_new_attribute(exc, exc.name.to_s.gsub(/=$/, ""))
     end
 
     # Implementation for adding new attribute in configuration block
@@ -35,7 +35,7 @@ module Rgentpl
     def add_new_attribute(exc, method)
       @config.extend Virtus.model
       @config.attribute method.to_sym, String, default: exc.args.first,
-                                               lazy: true
+        lazy: true
       @config.send(exc.name, exc.args.first)
     end
     private :add_new_attribute
@@ -45,9 +45,9 @@ module Rgentpl
   class Configuration
     include Virtus.model
 
-    attribute :active,   Boolean,                default: true
+    attribute :active, Boolean, default: true
     attribute :log_file, String
-    attribute :options,  Hash[Symbol => String], default: {}
+    attribute(:options, {Symbol => String}, default: {})
 
     # Set custom default values
     #
@@ -56,7 +56,7 @@ module Rgentpl
     def initialize(*args)
       super
       # Bug - Update some default values
-      @log_file = Rgentpl.env + '.log'
+      @log_file = Rgentpl.env + ".log"
     end
 
     # Configuration

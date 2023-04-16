@@ -1,3 +1,3 @@
 Rgentpl.configure do |config|
-  #config.active = false
+  # config.active = false
 end

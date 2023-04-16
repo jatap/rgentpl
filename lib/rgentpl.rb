@@ -30,8 +30,8 @@ module Rgentpl
     #
     # @return [String] the current environment
     def env
-      load File.expand_path("../config/environment.rb", __dir__) unless defined?(TEMPLATE_ENV)
-      TEMPLATE_ENV
+      load File.expand_path("../config/environment.rb", __dir__) unless ENV.include? "TEMPLATE_ENV"
+      ENV["TEMPLATE_ENV"]
     end
 
     # Logger

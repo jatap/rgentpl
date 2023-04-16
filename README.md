@@ -3,6 +3,8 @@ Introduction
 
 **rgentpl** is a Ruby library to generate a custom skeleton app.
 
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/testdouble/standard)
+
 It's based on a great toolkit for building powerful command-line interfaces, [Thor](https://github.com/erikhuda/thor), and main goal is cover some basic good practices.
 
 Directories
@@ -23,6 +25,7 @@ Application file structure (similar to generated).
       api/
 
     lib/
+      tasks/
       rgentpl/
         boot/
         command/
@@ -37,8 +40,6 @@ Application file structure (similar to generated).
       yard.log
 
     spec/
-
-    tasks/
 
     tmp/
 
@@ -76,21 +77,12 @@ Generate app updating root path.
 
     $ rgentpl generate my_app -p /root/path/to/app
 
-Generate app updating root path and ctags binary path.
-
-> $ which ctags
-
-    $ rgentpl generate my_app -p /root/path/to/app -t /path/to/ctags
-
 ### Options:
 
   * **-p** _root path_
 
 > Default value: /tmp
 
-  * **-t** _ctags binary path_
-
-> Default value: /usr/local/bin/ctags
 
 ### Environments:
 

@@ -1,4 +1,4 @@
-TEMPLATE_ROOT = "#{File.expand_path(File.dirname(__FILE__) + "/..")}" unless defined?( TEMPLATE_ROOT )
+TEMPLATE_ROOT = File.expand_path(File.dirname(__FILE__) + "/..").to_s unless defined?(TEMPLATE_ROOT)
 
 # Rgentpl
 #
@@ -19,7 +19,7 @@ module Rgentpl
     #
     # @return [void]
     def run
-      require_relative '../lib/rgentpl' unless defined?(Rgentpl.env)
+      require_relative "../lib/rgentpl" unless defined?(Rgentpl.env)
     end
   end
 end

@@ -23,18 +23,20 @@ describe <%= app_name.camelize %>::Configuration do
 
   context '#configure' do
     before :each do
-      <%= app_name.camelize %>.configure do |config|
-        config.new_amazing_key = 'some value'
-        config.active          = false
-      end
     end
 
     describe 'can be configured with a block' do
       it 'adding a new attribute' do
+        <%= app_name.camelize %>.configure do |config|
+          config.new_amazing_key = 'some value'
+        end
         expect(<%= app_name.camelize %>.config.new_amazing_key).to eq 'some value'
       end
 
       it 'updating an existing one' do
+        <%= app_name.camelize %>.configure do |config|
+          config.active          = false
+        end
         expect(<%= app_name.camelize %>.config.active).to be_falsey
       end
     end

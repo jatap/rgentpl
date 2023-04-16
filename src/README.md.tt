@@ -3,6 +3,8 @@ Introduction
 
 **<%= app_name %>** is a Ruby command line application.
 
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/testdouble/standard)
+
 Directories
 ===========
 
@@ -19,6 +21,7 @@ Directories
       api/
 
     lib/
+      tasks/
       <%= app_name %>/
         boot/
         command/
@@ -32,8 +35,6 @@ Directories
       production.log
 
     spec/
-
-    tasks/
 
     tmp/
 

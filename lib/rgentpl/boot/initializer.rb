@@ -15,7 +15,7 @@ module Rgentpl
       require_relative "../../../config/environments/#{Rgentpl.env}.rb"
 
       Dir[File.expand_path(File.join(File.dirname(__FILE__),
-                                     '../../../config/initializers/*.rb'))]
+        "../../../config/initializers/*.rb"))]
         .each do |file|
         require_relative file
       end

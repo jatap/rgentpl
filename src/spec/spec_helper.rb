@@ -1,6 +1,8 @@
 require "rubygems"
 require "pry"
 
+ENV["RUBY_ENV"] ||= "test"
+
 unless ENV["DRB"]
   require "simplecov"
   SimpleCov.start
@@ -10,7 +12,7 @@ require "rspec"
 
 ENV["TEMPLATE_ENV"] = "test"
 
-require File.dirname(__FILE__) + "/../config/environment"
+require File.dirname(__FILE__) + "/../config/environment.rb"
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }

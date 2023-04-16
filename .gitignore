@@ -29,7 +29,6 @@ pkg
 gems
 
 # Documentation
-doc/rdoc
 doc/api
 doc/app
 .yardoc/*
@@ -46,7 +45,6 @@ cache
 vendor/cache
 
 # Testing
-capybara*
 specifications
 !spec/support/.gitkeep
 !src/%app_name%.gemspec.tt/spec/support/.gitkeep
@@ -68,9 +66,6 @@ vendor/extensions/**/spec/dummy
 # Backup
 *~
 
-# Capybara Bug
-capybara-*html
-
 # sass
 .sass-cache
 .sass-cache/*
@@ -79,16 +74,11 @@ capybara-*html
 .rvmrc
 .rvmrc.*
 
-# CTags
-.tags*
 .gemtags*
 gem-tags*
 
 # TODO (Plain Tasks in Sublime Text 2)
 *.TODO
-
-# Sublime project files
-*.sublime-*
 
 # Webrat log
 webrat.log
